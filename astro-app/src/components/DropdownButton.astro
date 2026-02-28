@@ -34,7 +34,6 @@ const { label } = Astro.props;
   .dropdown-wrapper {
     position: relative;
     display: inline-block;
-    padding-bottom: 12px;
   }
 
     .gold-btn {
@@ -51,6 +50,14 @@ const { label } = Astro.props;
     cursor: pointer;
     transition: all 0.3s ease-out;
   }
+
+  .item-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.25em;
+  letter-spacing: 0.5px;
+   }
 
     .gold-btn:hover {
     background-color: var(--accent-gold);
@@ -73,7 +80,6 @@ const { label } = Astro.props;
     background: #000;
     border: 1px solid #fff;
     border-radius: 12px;
-    padding-bottom: 12px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
@@ -98,6 +104,7 @@ const { label } = Astro.props;
 
   .dropdown-menu a {
     display: block;
+    margin: 0;
     padding: 18px 24px;
     color: white;
     border-bottom: 2px solid #fff;
@@ -127,7 +134,7 @@ const { label } = Astro.props;
   transform: scale(1.12);
   color: #000;
   }
-  
+
   .dropdown-menu a span {
   display: inline-block;
   transition: transform .35s ease;

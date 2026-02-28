@@ -28,6 +28,7 @@ const { label } = Astro.props;
   .dropdown-wrapper {
     position: relative;
     display: inline-block;
+    padding-bottom: 12px;
   }
 
     .gold-btn {
@@ -65,12 +66,21 @@ const { label } = Astro.props;
     background: #000;
     border: 1px solid var(--accent-gold);
     border-radius: 10px;
+    padding-bottom: 12px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
     pointer-events: none;
     transition: all .25s ease;
   }
+
+  /* Keep button visually hovered while inside wrapper */
+    .dropdown-wrapper:hover .gold-btn {
+  background-color: var(--accent-gold);
+  color: #000;
+  box-shadow: 0 0 40px rgba(255, 207, 35, .5);
+  transform: translateY(-2px);
+}
 
   .dropdown-wrapper:hover .dropdown-menu {
     opacity: 1;

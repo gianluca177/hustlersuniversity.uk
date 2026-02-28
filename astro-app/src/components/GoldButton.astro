@@ -1,0 +1,49 @@
+---
+interface Props {
+  text: string;
+  id?: string;
+  fullWidth?: boolean;
+}
+
+const { text, id = "", fullWidth = false } = Astro.props;
+---
+
+<button
+  id={id}
+  class={`gold-btn ${fullWidth ? "w-full" : ""}`}
+>
+  {text}
+</button>
+
+<style>
+  :root {
+    --accent-gold: #FFCF23;
+  }
+
+  .gold-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1em;
+    padding: 22px 58px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 8px;
+    border: 1px solid var(--accent-gold);
+    box-shadow: 0 8px 23px 0 rgba(255, 207, 35, .34);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+
+  .gold-btn:hover {
+    background-color: var(--accent-gold);
+    color: #000;
+    box-shadow: 0 0 40px rgba(255, 207, 35, .5);
+    transform: translateY(-2px);
+  }
+
+  .gold-btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 4px 15px rgba(255, 207, 35, .25);
+  }
+</style>

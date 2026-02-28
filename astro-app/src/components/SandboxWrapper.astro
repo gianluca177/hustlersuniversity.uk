@@ -1,0 +1,24 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title = "Sandbox" } = Astro.props;
+---
+
+<section class="min-h-screen bg-slate-950 text-white px-8 py-20">
+
+  <div class="max-w-6xl mx-auto">
+
+    <div class="mb-12">
+      <h1 class="text-4xl font-bold mb-3">{title}</h1>
+      <p class="text-white/50">Safe testing environment. Nothing here affects production.</p>
+    </div>
+
+    <div class="bg-slate-900/50 border border-white/10 rounded-2xl p-12">
+      <slot />
+    </div>
+
+  </div>
+
+</section>

@@ -13,9 +13,9 @@ const { label } = Astro.props;
   </button>
 
   <div class="dropdown-menu">
-    <a href="#">Conquer (1 Month)</a>
-    <a href="#">Conquer (1 Year)</a>
-    <a href="#">Vanguard (1 Year)</a>
+    <a href="#"><span>Conquer (1 Month)</span>Conquer (1 Month)</a>
+    <a href="#"><span>Conquer (1 Year)</span>Conquer (1 Year)</a>
+    <a href="#"><span>Vanguard (1 Year)</span>Vanguard (1 Year)</a>
   </div>
 
 </div>
@@ -97,6 +97,11 @@ const { label } = Astro.props;
     transition: transform 0.5s ease, color 0.5s ease;
   }
 
+  .dropdown-menu a span {
+  display: inline-block;
+  transition: transform .35s ease;
+    }
+
   .dropdown-menu a:last-child {
     border-bottom: none;
   }
@@ -104,6 +109,9 @@ const { label } = Astro.props;
   .dropdown-menu a:hover {
     background: var(--accent-gold);
     color: black;
-    transform: scale(1.03);
   }
+  .dropdown-menu a span {
+  display: inline-block;
+  transition: transform .35s ease;
+ }
 </style>

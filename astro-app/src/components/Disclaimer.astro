@@ -1,0 +1,33 @@
+---
+interface Props {
+  icon?: string;
+  beforeText: string;
+  afterText: string;
+  highlightText?: string;
+  dateId?: string;
+}
+
+const {
+  icon = "$",
+  beforeText,
+  afterText,
+  highlightText,
+  dateId = "dynamicDate"
+} = Astro.props;
+---
+
+<p class="mt-2 text-[#FFFFFFBA] text-sm text-center leading-relaxed">
+  <span class="text-lg text-white mr-2">
+    {icon}
+  </span>
+
+  {beforeText}
+  <span id={dateId}></span>.
+  {afterText}
+
+  {highlightText && (
+    <span class="text-[var(--accent-gold)] font-medium">
+      {" "}{highlightText}
+    </span>
+  )}
+</p>

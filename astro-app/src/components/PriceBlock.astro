@@ -1,0 +1,51 @@
+---
+interface Props {
+  titleBefore: string;
+  titleUnderline: string;
+  titleAfter: string;
+  oldPrice: string;
+  newPrice: string;
+  billingText?: string;
+  ctaText: string;
+  ctaLink: string;
+}
+
+const {
+  titleBefore,
+  titleUnderline,
+  titleAfter,
+  oldPrice,
+  newPrice,
+  billingText = "",
+  ctaText,
+  ctaLink
+} = Astro.props;
+---
+
+<div class="text-center mb-8">
+  <!-- TITLE -->
+  <p class="text-[#FFFFFFBA] text-lg mb-6">
+    {titleBefore}
+    <span class="font-medium underline underline-offset-4">
+      {titleUnderline}
+    </span>
+    {titleAfter}
+  </p>
+
+  <!-- PRICE LINE -->
+  <p class="text-[#FFFFFFBA] text-xl mb-6">
+    Only
+    <span class="line-through opacity-60 ml-1">{oldPrice}</span>
+    <span class="text-white font-semibold ml-2">{newPrice}{billingText}</span>
+  </p>
+
+  <!-- CTA LINK -->
+  <a
+    href={ctaLink}
+    class="!text-[var(--accent-gold)] !underline underline-offset-4 font-medium"
+    target="_blank"
+    rel="noopener"
+  >
+    {ctaText}
+  </a>
+</div>

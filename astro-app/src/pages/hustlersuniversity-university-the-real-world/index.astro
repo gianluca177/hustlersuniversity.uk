@@ -1,0 +1,136 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Hustlers University is Now The Real World | Official Transition Page"
+  description="Hustlers University has officially evolved into The Real World. Learn what changed and how to secure your spot before pricing increases."
+>
+
+  <main class="mx-auto max-w-6xl px-6 py-24 text-white">
+
+    <!-- HERO SECTION -->
+    <section class="text-center mb-20">
+
+      <div class="flex items-center justify-center gap-8 flex-wrap mb-10">
+
+        <!-- HU -->
+        <div class="opacity-40 relative w-28 md:w-36">
+          <img src="/hu-logo.png" alt="Hustlers University Logo" class="w-full mx-auto" />
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-full h-[3px] bg-red-500 rotate-12"></div>
+          </div>
+        </div>
+
+        <div class="text-3xl md:text-4xl text-accent font-bold">→</div>
+
+        <!-- TRW -->
+        <div class="w-32 md:w-40">
+          <img src="/trw-logo.png" alt="The Real World Logo" class="w-full mx-auto" />
+        </div>
+
+      </div>
+
+      <h1 class="text-3xl md:text-5xl font-semibold mb-6">
+        Hustlers University is Now
+        <span class="text-accent">The Real World</span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto opacity-80">
+        The platform has evolved into a more advanced, structured system
+        built for modern digital income and long-term skill development.
+      </p>
+
+    </section>
+
+
+    <!-- SALES CARD -->
+    <section class="max-w-3xl mx-auto bg-panel border border-white/10 rounded-2xl p-8 md:p-12 text-center shadow-lg space-y-8">
+
+      <h2 class="text-2xl md:text-3xl font-semibold">
+        The Choice Is Yours
+      </h2>
+
+      <p class="text-accent font-medium">
+        Secure Your Spot Before Pricing Increases
+      </p>
+
+      <!-- Video -->
+      <div class="aspect-video bg-black rounded-xl"></div>
+
+      <!-- Urgency -->
+      <div>
+        <h3 class="font-semibold text-lg">
+          Limited Spots Remaining at $99 / Month
+        </h3>
+        <p class="text-sm opacity-70">
+          Updated <span id="currentDate"></span>
+        </p>
+      </div>
+
+      <!-- Countdown -->
+      <div class="grid grid-cols-3 md:grid-cols-4 gap-4 text-xl font-semibold">
+
+        <div>
+          <div id="hours">00</div>
+          <div class="text-xs opacity-60">Hours</div>
+        </div>
+
+        <div>
+          <div id="minutes">00</div>
+          <div class="text-xs opacity-60">Minutes</div>
+        </div>
+
+        <div>
+          <div id="seconds">00</div>
+          <div class="text-xs opacity-60">Seconds</div>
+        </div>
+
+        <div class="hidden md:block">
+          <div id="days">00</div>
+          <div class="text-xs opacity-60">Days</div>
+        </div>
+
+      </div>
+
+      <!-- Spaces -->
+      <div>
+        <div class="text-xs uppercase tracking-wide opacity-70 mb-2">
+          Current Availability
+        </div>
+        <div id="spacesLeft" class="text-4xl font-bold">
+          312
+        </div>
+      </div>
+
+      <!-- Pricing -->
+      <div>
+        <p class="opacity-70">Lock-In Founder Pricing</p>
+        <p class="text-lg font-semibold">
+          <span class="line-through opacity-50">$147</span>
+          <span class="text-accent">$99.99 / Month</span>
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <div>
+        <button
+          id="dropdownBtn"
+          class="bg-accent text-black font-semibold px-6 py-3 rounded-xl hover:opacity-90 transition"
+        >
+          Join The Real World
+        </button>
+      </div>
+
+      <!-- Price Tag -->
+      <p class="text-xs opacity-60">
+        Limited Spaces Available at $99 for
+        <span id="priceDate"></span>.
+        Before Price Increases to $147.
+      </p>
+
+    </section>
+
+  </main>
+
+</Layout>

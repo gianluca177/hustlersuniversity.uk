@@ -1,8 +1,9 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import DropdownButton from "../../components/elements/DropdownButton.astro";
-import Disclaimer from "../../components/elements/Disclaimer.astro";
-import PriceBlock from "../../components/elements/PriceBlock.astro";
+import DropdownButton from "../../components/Elements/DropdownButton.astro";
+import Disclaimer from "../../components/Elements/Disclaimer.astro";
+import PriceBlock from "../../components/Elements/PriceBlock.astro";
+import BrandTransitionSectionV5 from "../../components/Containers/BrandTransitionSection-v5.astro";
 ---
 
 <Layout
@@ -21,23 +22,6 @@ import PriceBlock from "../../components/elements/PriceBlock.astro";
 
   <!-- HERO -->
   <section class="pt-32 pb-20 text-center px-6">
-
-    <div class="flex justify-center items-center gap-8 mb-10">
-
-      <div class="opacity-40 relative w-28">
-        <img src="/hu-logo.png" class="w-full" />
-        <div class="absolute inset-0 flex items-center justify-center">
-          <div class="w-full h-[2px] bg-red-500 rotate-12"></div>
-        </div>
-      </div>
-
-      <span class="text-3xl text-white">→</span>
-
-      <div class="w-32">
-        <img src="/trw-logo.png" class="w-full" />
-      </div>
-
-    </div>
 
     <h1 class="text-4xl md:text-6xl font-semibold leading-tight">
       Hustlers University is Now
@@ -59,6 +43,9 @@ import PriceBlock from "../../components/elements/PriceBlock.astro";
              p-14 text-center
              shadow-[0_40px_120px_rgba(0,0,0,0.65)]"
     >
+
+
+    <BrandTransitionSectionV5 />
 
       <!-- CURRENT SPACES -->
       <p class="text-sm uppercase tracking-wide text-[var(--accent-gold)] font-semibold mb-3">

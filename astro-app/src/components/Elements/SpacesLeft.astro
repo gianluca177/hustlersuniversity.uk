@@ -1,0 +1,21 @@
+---
+interface Props {
+  value: number;
+}
+
+const { value } = Astro.props;
+---
+
+<div class="text-center">
+    <p class="text-sm uppercase tracking-wide text-[var(--accent-gold)] font-semibold mb-3 underline underline-offset-4">
+        CURRENT SPACES LEFT
+    </p>
+  <div
+    id="spacesLeft"
+    class="text-6xl font-semibold mb-6 text-[var(--accent-gold)]
+           drop-shadow-[0_0_14px_rgba(255,207,35,0.25)]"
+  >
+    {value}
+  </div>
+
+</div>

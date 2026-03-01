@@ -4,6 +4,10 @@ import DropdownButton from "../../components/Elements/DropdownButton.astro";
 import Disclaimer from "../../components/Elements/Disclaimer.astro";
 import PriceBlock from "../../components/Elements/PriceBlock.astro";
 import BrandTransitionSectionV5 from "../../components/Containers/BrandTransitionSection-v5.astro";
+import TransitionSection from "../../components/Sections/TransitionSection.astro";
+import NavBarFunnel from "../../components/Elements/NavBarFunnel.astro";
+import SpacesLeft from "../../components/Elements/SpacesLeft.astro";
+import BackgroundLayer from "../../components/Elements/BackgroundLayer.astro";
 ---
 
 <Layout
@@ -13,13 +17,15 @@ import BrandTransitionSectionV5 from "../../components/Containers/BrandTransitio
 
 <main class="relative min-h-screen text-white font-outfit">
 
+  <!-- NAVBAR FUNNEL -->
+  <NavBarFunnel />
+
   <!-- FIXED BACKGROUND -->
-  <div class="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-       style="background-image:url('/background-placeholder.jpg')"></div>
-
-  <!-- DARK OVERLAY -->
-  <div class="fixed inset-0 -z-10 bg-[#061322]/90"></div>
-
+  <BackgroundLayer 
+    image="/hu-trw-background.webp" 
+    overlayOpacity={0.95} 
+   />
+   
   <!-- HERO -->
   <section class="pt-32 pb-20 text-center px-6">
 
@@ -35,30 +41,16 @@ import BrandTransitionSectionV5 from "../../components/Containers/BrandTransitio
   </section>
 
 <!-- CENTER CARD -->
-<section class="pb-36 px-6 overflow-hidden">
-  <div class="max-w-2xl mx-auto animate-slideIn">
-    <div
-      class="bg-gradient-to-b from-[#10263F] to-[#091B2E]
-             border border-white/5 rounded-[12px]
-             p-14 text-center
-             shadow-[0_40px_120px_rgba(0,0,0,0.65)]"
-    >
+<TransitionSection>
 
+    <p class="text-sm font-semi-bold !text-[var(--accent-gold)] underline underline-offset-4 decoration-2">
+      ACT NOW TO SECURE YOUR SPOT
+    </p>
 
     <BrandTransitionSectionV5 />
 
       <!-- CURRENT SPACES -->
-      <p class="text-sm uppercase tracking-wide text-[var(--accent-gold)] font-semibold mb-3">
-        CURRENT SPACES LEFT
-      </p>
-
-      <div
-        id="spacesLeft"
-        class="text-6xl font-semibold mb-8 text-[var(--accent-gold)]
-               drop-shadow-[0_0_14px_rgba(255,207,35,0.25)]"
-      >
-        312
-      </div>
+      <SpacesLeft value={312} />
 
       <!-- PRICE -->
       <PriceBlock
@@ -66,7 +58,7 @@ import BrandTransitionSectionV5 from "../../components/Containers/BrandTransitio
         titleUnderline="Lock-in Price"
         titleAfter=" for"
         oldPrice="$147"
-        newPrice="$99.99"
+        newPrice="$99"
         billingText="/Monthly"
         ctaText="Act Now To Secure Your Spot"
         ctaLink="https://jointherealworld.com/checkout?a=7nrnndpb&subid=actnow"
@@ -86,9 +78,7 @@ import BrandTransitionSectionV5 from "../../components/Containers/BrandTransitio
         dateId="dynamicDate2"
       />
 
-    </div>
-  </div>
-</section>
+</TransitionSection>
 
 </main>
 

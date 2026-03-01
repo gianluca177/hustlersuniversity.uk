@@ -1,0 +1,26 @@
+---
+interface Props {
+  image: string;
+  overlayColor?: string;
+  overlayOpacity?: number;
+  position?: string;
+}
+
+const {
+  image,
+  overlayColor = "#061322",
+  overlayOpacity = 0.9,
+  position = "center"
+} = Astro.props;
+---
+
+<div class="fixed inset-0 -z-10">
+  <div
+    class="absolute inset-0 bg-cover bg-no-repeat"
+    style={`background-image:url('${image}'); background-position:${position};`}
+  ></div>
+
+  <div
+    class="absolute inset-0"
+    style={`background-color:${overlayColor}; opacity:${overlayOpacity};`}
+  ></div>
